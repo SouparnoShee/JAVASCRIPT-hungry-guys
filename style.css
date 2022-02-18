@@ -1,0 +1,86 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: darkslateblue;
+    min-height: 100vh;
+    cursor:url('cursor.ico'), pointer;
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container .faces{
+    position: relative;
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+    background-color: deeppink;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0px 22px;
+}
+
+.container .faces:hover{
+    background: linear-gradient(rgb(238, 238, 9),rgb(114, 112, 112));
+}
+
+.faces::before{
+    content: "";
+    position: absolute;
+    top: 180px;
+    width: 150px;
+    height: 20px;
+    margin: 20px 0px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    background-color: white;
+    transition: 0.5s;
+}
+
+.faces:hover:before{
+    top: 180px;
+    width: 150px;
+    height: 70px;
+    border-bottom-left-radius: 70px;
+    border-bottom-right-radius: 70px;
+}
+
+.eyes{
+    position: relative;
+    display: flex;
+    top: -40px;
+    flex-wrap: wrap;
+}
+
+.eyeball{
+    position: relative;
+    width: 80px;
+    height: 80px;
+    display: block;
+    margin:0px 15px ;
+    background-color: white;
+    border-radius: 50%;
+}
+
+.eyeball::before{
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 25px;
+    transform: translate(-50%,-50%);
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background-color: black;
+}
+
